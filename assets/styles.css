@@ -1,0 +1,241 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+  
+
+
+body {
+
+    display: grid;
+    grid-template-areas:
+    "nav"
+    "aside"
+    "main"
+    "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: 100vh;
+    animation: color;
+    background: rgb(170, 156, 171);
+    background: linear-gradient(90deg, rgba(170, 156, 171, 1) 0%, rgba(139, 118, 152, 1) 35%, rgba(95, 80, 134, 1) 100%);
+    height: 100vh;
+    width: 100%;
+    background-size: 300% 300%;
+    animation: change-bg 7s ease infinite;
+}
+
+nav{
+    grid-area: nav;
+    background-color: rgb(241, 238, 235);
+    justify-content: center;
+    justify-items: center;
+    height: 200px;
+    
+}
+nav .logo{
+    display: flex;
+    justify-content: center;
+    width: 85px;
+    height: 150px;
+    
+
+}
+
+aside {
+    grid-area: aside;
+    background-color: rgb(235, 245, 245);
+    text-decoration: none;
+    list-style: none;
+}
+
+main {
+    grid-area: main;
+    background-color: antiquewhite;
+}
+
+main .encabezado{
+    background-color: #0b6daf;
+    color: rgb(222, 227, 231);
+    width: 75%;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 10px;
+    box-shadow: 1px 1px 1px 1px #69c7d3;
+
+}
+
+section .productos img{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+   width: 100%;
+   height: 210px;
+   border-radius: 5px;
+
+
+}
+
+.productos {
+
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: all 400ms ease;
+
+}
+
+.productos:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+
+}
+
+section .texto{
+    /* justify-content: center;
+    flex-direction: column;
+    position: relative;
+    margin: 10px;
+    */
+    padding: 15%;
+    text-align: center;
+     
+}
+section .texto p{
+    line-height: 1.5;
+    color: #6a6a6a;
+}
+
+section .texto button {
+   height: 30px;
+    width: 60px;
+    margin-top: 5px;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+header .productos img{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+   width: 100%;
+   height: 210px;
+   border-radius: 5px;
+
+}
+
+header .texto {
+    /* justify-content: center;
+    flex-direction: column;
+    position: relative;
+    margin: 10px; */
+    
+    padding: 15%;
+    text-align: center;
+}
+
+header .texto p{
+   
+    line-height: 1.5;
+    color: #6a6a6a;
+
+}
+
+header .texto button {
+    height: 30px;
+    width: 60px;
+    margin-top: 5px;
+    justify-content: center;
+    text-align: center;
+     
+}
+
+footer{
+    grid-area: footer;
+    background-color: #0b6daf;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    color: aliceblue;
+    font-size: 16px;
+ 
+}
+
+footer i{
+    justify-content: center;
+    padding: 5px;
+    font-size: 16px;
+}
+
+@media (width >= 576px) {
+    body {
+        grid-template-areas: 
+        "nav nav"
+        "aside main"
+        "footer footer"
+        ;
+        grid-template-columns: 1fr 5fr;
+        grid-template-rows: auto;
+        height: 100vh;
+    }
+
+    main{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main section {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 20px;
+        overflow: hidden;
+    }
+
+    main header {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 20px;
+        overflow: hidden;
+
+
+    }
+
+    
+
+    footer{
+        grid-area: footer;
+        background-color: #0b6daf;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10px;
+        color: aliceblue;
+        font-size: 16px;
+
+
+
+}
+
+@keyframes color{
+    0% {
+        background-color: aliceblue;
+        color: #1f3077;
+    }
+
+      100% {
+        background-color: #1f3077;
+        color: aliceblue;
